@@ -29,7 +29,7 @@ let Dashboard = () => {
                 setOrders(ordersResponseBody);
             }
         }
-    }, [userContext.user.currentUserId])
+    }, [userContext.user.currentUserId]);
 
 
     useEffect(() => {

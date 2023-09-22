@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Login from "./Login";
 import Register from "./Register";
 import NotFound from './NotFound';
@@ -5,10 +6,9 @@ import Dashboard from './Dashboard';
 import NavBar from './NavBar';
 import { UserContext } from './UserContext';
 import { HashRouter, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+
 
 function App() {
-
   let [user, setUser] = useState({
     isLoggedIn: false,
     currentUserId: null,
