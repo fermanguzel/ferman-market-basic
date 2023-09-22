@@ -4,8 +4,10 @@ import Register from "./Register";
 import NotFound from './NotFound';
 import Dashboard from './Dashboard';
 import NavBar from './NavBar';
+import Store from './Store';
 import { UserContext } from './UserContext';
 import { HashRouter, Routes, Route } from 'react-router-dom';
+
 
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
             <Route path="/" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/store" element={<Store />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

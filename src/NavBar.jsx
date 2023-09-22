@@ -25,9 +25,14 @@ let NavBar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         {userContext.user.isLoggedIn ? (
-                            <li className="nav-item">
-                                <NavLink className="nav-link" aria-current="page" to="/dashboard" activeclassname="active"><i className="fa fa-dashboard"></i> Dashboard</NavLink>
-                            </li>
+                            <>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" aria-current="page" to="/dashboard" activeclassname="active"><i className="fa fa-dashboard"></i> Dashboard</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" aria-current="page" to="/store" activeclassname="active"><i className="fa fa-shopping-bag"></i> Store</NavLink>
+                                </li>
+                            </>
                         ) : (
                             <>
                                 <li className="nav-item">
