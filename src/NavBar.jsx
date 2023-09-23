@@ -10,7 +10,7 @@ let NavBar = () => {
         event.preventDefault();
 
         userContext.setUser({
-            isLoggedIn: false, currentUserId: null, currentUserName: null
+            isLoggedIn: false, currentUserId: null, currentUserName: null, currentUserRole: null
         });
         window.location.hash = "/";
     }
@@ -24,24 +24,40 @@ let NavBar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        {userContext.user.isLoggedIn ? (
-                            <>
-                                <li className="nav-item">
-                                    <NavLink className="nav-link" aria-current="page" to="/dashboard" activeclassname="active"><i className="fa fa-dashboard"></i> Dashboard</NavLink>
-                                </li>
-                                <li className="nav-item">
-                                    <NavLink className="nav-link" aria-current="page" to="/store" activeclassname="active"><i className="fa fa-shopping-bag"></i> Store</NavLink>
-                                </li>
-                            </>
+                        {userContext.user.isLoggedIn && userContext.user.currentUserRole === "admin" ? (
+                            <li className="nav-item">
+                                <NavLink className="nav-link" aria-current="page" to="/products" activeclassname="active"><i className="fa fa-suitcase"></i> Products</NavLink>
+                            </li>
                         ) : (
-                            <>
-                                <li className="nav-item">
-                                    <NavLink className="nav-link" to="/" activeclassname="active" > Login</NavLink>
-                                </li>
-                                <li className="nav-item">
-                                    <NavLink className="nav-link" to="/register" activeclassname="active"><i className="fa fa-user-plus"></i> Register</NavLink>
-                                </li>
-                            </>
+                            ""
+                        )}
+                        {userContext.user.isLoggedIn && userContext.user.currentUserRole === "user" ? (
+                            <li className="nav-item">
+                                <NavLink className="nav-link" aria-current="page" to="/dashboard" activeclassname="active"><i className="fa fa-dashboard"></i> Dashboard</NavLink>
+                            </li>
+                        ) : (
+                            ""
+                        )}
+                        {userContext.user.isLoggedIn && userContext.user.currentUserRole === "user" ? (
+                            <li className="nav-item">
+                                <NavLink className="nav-link" aria-current="page" to="/store" activeclassname="active"><i className="fa fa-shopping-bag"></i> Store</NavLink>
+                            </li>
+                        ) : (
+                            ""
+                        )}
+                        {!userContext.user.isLoggedIn ? (
+                            <li className="nav-item">
+                                <NavLink className="nav-link" aria-current="page" to="/" activeclassname="active" exact={"true"}>Login</NavLink>
+                            </li>
+                        ) : (
+                            ""
+                        )}
+                        {!userContext.user.isLoggedIn ? (
+                            <li className="nav-item">
+                                <NavLink className="nav-link" aria-current="page" to="/register" activeclassname="active">Register</NavLink>
+                            </li>
+                        ) : (
+                            ""
                         )}
                     </ul>
                     {userContext.user.isLoggedIn && (

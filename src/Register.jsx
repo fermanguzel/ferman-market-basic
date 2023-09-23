@@ -134,7 +134,8 @@ let Register = () => {
                     gender: state.gender,
                     country: state.country,
                     adress: state.adress,
-                    receiveNewsLetters: state.receiveNewsLetters
+                    receiveNewsLetters: state.receiveNewsLetters,
+                    role: "user"
                 }),
                 headers: { "Content-type": "application/json" },
             });
@@ -142,7 +143,13 @@ let Register = () => {
 
                 let responseBody = await response.json();
 
-                userContext.setUser({ ...userContext.user, isLoggedIn: true, currentUserName: responseBody.fullName, currentUserId: responseBody.id });
+                userContext.setUser({
+                    ...userContext.user,
+                    isLoggedIn: true,
+                    currentUserName: responseBody.fullName,
+                    currentUserId: responseBody.id,
+                    currentUserRole: responseBody.role
+                });
 
                 setMessage(<span className="text-success">Success</span>)
 

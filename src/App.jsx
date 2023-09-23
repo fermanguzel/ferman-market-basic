@@ -5,16 +5,17 @@ import NotFound from './NotFound';
 import Dashboard from './Dashboard';
 import NavBar from './NavBar';
 import Store from './Store';
+import ProductsList from './ProductsList';
 import { UserContext } from './UserContext';
 import { HashRouter, Routes, Route } from 'react-router-dom';
-
 
 
 function App() {
   let [user, setUser] = useState({
     isLoggedIn: false,
     currentUserId: null,
-    currentUserName: null
+    currentUserName: null,
+    currentUserRole: null
   });
 
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/store" element={<Store />} />
+            <Route path="/products" element={<ProductsList />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

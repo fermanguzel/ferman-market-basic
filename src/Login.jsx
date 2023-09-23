@@ -79,10 +79,19 @@ let Login = (props) => {
 
                 if (responseBody.length > 0) {
 
-                    userContext.setUser({ ...userContext.user, isLoggedIn: true, currentUserName: responseBody[0].fullName, currentUserId: responseBody[0].id });
+                    userContext.setUser({
+                        ...userContext.user,
+                        isLoggedIn: true,
+                        currentUserName: responseBody[0].fullName,
+                        currentUserId: responseBody[0].id,
+                        currentUserRole: responseBody[0].role
+                    });
 
-                    navigate("/dashboard");
-
+                    if (responseBody[0].role === "user") {
+                        navigate("/dashboard");
+                    } else {
+                        navigate("/products");
+                    }
                 } else {
                     setMessage(<span className="text-danger">Invalid Login, please try again!</span>);
                 }

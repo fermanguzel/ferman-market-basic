@@ -117,7 +117,7 @@ let Store = () => {
             <div className="row py-3 header">
                 <div className="col-lg-3">
                     <h4>
-                        <i className="fa fa-shopping-bag"></i> Store{" "}
+                        <i className="fa fa-shopping-bag"></i> Store &nbsp;
                         <span className="badge bg-secondary">
                             {productsToShow.length}
                         </span>
@@ -128,7 +128,7 @@ let Store = () => {
                         value={search}
                         placeholder="Search products.."
                         className="form-control"
-                        autoFocus="autofocus"
+                        autoFocus="autoFocus"
                         onChange={(event) => { setSearch(event.target.value) }} />
                 </div>
             </div>
