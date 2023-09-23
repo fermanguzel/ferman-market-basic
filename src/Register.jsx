@@ -143,12 +143,13 @@ let Register = () => {
 
                 let responseBody = await response.json();
 
-                userContext.setUser({
-                    ...userContext.user,
-                    isLoggedIn: true,
-                    currentUserName: responseBody.fullName,
-                    currentUserId: responseBody.id,
-                    currentUserRole: responseBody.role
+                userContext.dispatch({
+                    type: "login",
+                    payload: {
+                        currentUserName: responseBody.fullName,
+                        currentUserId: responseBody.id,
+                        currentUserRole: responseBody.role
+                    }
                 });
 
                 setMessage(<span className="text-success">Success</span>)

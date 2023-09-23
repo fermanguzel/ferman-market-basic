@@ -9,8 +9,8 @@ let NavBar = () => {
     let onLogoutClick = (event) => {
         event.preventDefault();
 
-        userContext.setUser({
-            isLoggedIn: false, currentUserId: null, currentUserName: null, currentUserRole: null
+        userContext.dispatch({
+            type: "logout"
         });
         window.location.hash = "/";
     }

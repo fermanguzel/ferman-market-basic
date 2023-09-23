@@ -1,0 +1,197 @@
+{
+  "brands": [
+    {
+      "id": 1,
+      "brandName": "Apple"
+    },
+    {
+      "id": 2,
+      "brandName": "Samsung"
+    },
+    {
+      "id": 3,
+      "brandName": "Sony"
+    },
+    {
+      "id": 4,
+      "brandName": "MSI"
+    },
+    {
+      "id": 5,
+      "brandName": "Monster"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "categoryName": "Mobile"
+    },
+    {
+      "id": 2,
+      "categoryName": "Elektronic"
+    },
+    {
+      "id": 3,
+      "categoryName": "Appliances"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "productName": "Apple IPhone 14",
+      "price": 45000,
+      "brandId": 1,
+      "categoryId": 1,
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "productName": "Apple IPhone 13",
+      "price": 35000,
+      "brandId": 1,
+      "categoryId": 1,
+      "rating": 3
+    },
+    {
+      "id": 3,
+      "productName": "Apple IPad Pro",
+      "price": 45000,
+      "brandId": 1,
+      "categoryId": 2,
+      "rating": 4
+    },
+    {
+      "id": 4,
+      "productName": "Sony Camera",
+      "price": 55000,
+      "brandId": 3,
+      "categoryId": 2,
+      "rating": 5
+    },
+    {
+      "id": 5,
+      "productName": "Sony PS 5",
+      "price": 45000,
+      "brandId": 3,
+      "categoryId": 2,
+      "rating": 5
+    },
+    {
+      "id": 6,
+      "productName": "Samsung Led TV",
+      "price": 57000,
+      "brandId": 2,
+      "categoryId": 2,
+      "rating": 4
+    },
+    {
+      "id": 7,
+      "productName": "Samsung Air Conditioner",
+      "price": 42000,
+      "brandId": 2,
+      "categoryId": 3,
+      "rating": 2
+    },
+    {
+      "id": 8,
+      "productName": "MSI Gaming Notebook",
+      "price": 71000,
+      "brandId": 4,
+      "categoryId": 2,
+      "rating": 5
+    },
+    {
+      "id": 9,
+      "productName": "Monster Tulpar Notebook",
+      "price": 67000,
+      "brandId": 5,
+      "categoryId": 2,
+      "rating": 3
+    },
+    {
+      "id": 10,
+      "productName": "Samsung Refrigerator",
+      "price": 82000,
+      "brandId": 2,
+      "categoryId": 3,
+      "rating": 2
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "ferman@ferman.com",
+      "password": "Fer123",
+      "fullName": "Ferman",
+      "dateOfBirth": "1990-04-06",
+      "gender": "male",
+      "country": "Turkey",
+      "adress": "Kültür Mahallesi",
+      "receiveNewsLetters": true,
+      "role": "user"
+    },
+    {
+      "id": 2,
+      "email": "admin@ferman.com",
+      "password": "Fer123",
+      "fullName": "admin",
+      "dateOfBirth": "1990-04-06",
+      "gender": "male",
+      "country": "Turkey",
+      "adress": "Kültür Mahallesi",
+      "receiveNewsLetters": true,
+      "role": "admin"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": 1,
+      "productId": 1,
+      "quantity": 2,
+      "isPaymentCompleted": true
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "productId": 5,
+      "quantity": 1,
+      "isPaymentCompleted": true
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "productId": 4,
+      "quantity": 4,
+      "isPaymentCompleted": true
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "productId": 1,
+      "quantity": 1,
+      "isPaymentCompleted": true
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "productId": 1,
+      "quantity": 1,
+      "isPaymentCompleted": true
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "productId": 3,
+      "quantity": 1,
+      "isPaymentCompleted": true
+    },
+    {
+      "id": 9,
+      "userId": 1,
+      "productId": 9,
+      "quantity": 1,
+      "isPaymentCompleted": true
+    }
+  ]
+}
